@@ -1,0 +1,94 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf320
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red107\green107\blue107;\red100\green56\blue32;\red196\green26\blue22;
+\red170\green13\blue145;\red63\green110\blue116;\red46\green13\blue110;\red38\green71\blue75;\red28\green0\blue207;
+}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\b\fs28 \cf0 Purpose:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b0\fs24 \cf2 Create a Helper class to save time on receptive tasks.
+\b\fs28 \cf0 \
+\
+Terms and Conditions:\
+
+\b0\fs24 \cf2 This Helper class is open source and falls under the GNU Public General License\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b\fs28 \cf0 Features:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b0\fs24 \cf2 Play a sound file, mp3, wav, caf\
+ 
+\b\fs28 \cf0 \
+Installation:
+\fs24 \
+\
+Add the Frameworks below\
+AudioToolBox.framework\
+\
+
+\b0 \cf2 import MSHelper in your projects .h like the example shown below\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f1\fs22 \cf3 \CocoaLigature0 \
+\pard\tx560\pardeftab560\ql\qnatural\pardirnatural
+\cf3 #import \cf4 "MSHelper.h"\cf3 \
+\cf0 \
+\cf5 @interface\cf0  myProject : UIViewController \{\
+\
+	\
+	\cf6 MSHelper\cf0  *\cf6 msHelper\cf0 ;\
+	\
+\}\
+\
+\cf5 @end\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf2 \CocoaLigature1 Then inside the 
+\b \cf0 viewDidLoad
+\b0 \cf2  method of your .m file just 
+\b \cf0 alloc and init
+\b0  \cf2 the helper class. 
+\f1\fs22 \cf5 \CocoaLigature0 \
+\pard\tx560\pardeftab560\ql\qnatural\pardirnatural
+\cf0 - (\cf5 void\cf0 )viewDidLoad \{\
+    [\cf5 super\cf0  \cf7 viewDidLoad\cf0 ];\
+\
+	\cf6 msHelper\cf0  = [[\cf6 MSHelper\cf0  \cf7 alloc\cf0 ] \cf7 init\cf0 ];\
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\b\fs28 \cf0 Examples:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\fs26 \cf0 play a sound file
+\fs28 \
+\pard\tx560\pardeftab560\ql\qnatural\pardirnatural
+
+\f1\b0\fs22 \cf0 \CocoaLigature0 [\cf6 msHelper\cf0  \cf8 initWithBGMusic\cf0 :\cf4 @"ThunderStorms"\cf0  \cf8 type\cf0 :\cf4 @"mp3"\cf0  \cf8 gain\cf0 :\cf9 0.3\cf0  \cf8 repeat\cf0 :\cf5 YES\cf0 ];\
+\
+[\cf6 msHelper\cf0  \cf8 stopBGMusic\cf0 ];\
+\
+[\cf6 msHelper\cf0  \cf8 initAlertOK\cf0 :\cf4 @"This is a Message"\cf0  \cf8 title\cf0 :\cf4 @"This is a Title"\cf0 ];	\
+\
+[\cf6 msHelper\cf0  \cf8 scaleImageAndRotate\cf0 :\cf6 msLogo\cf0  \cf8 duration\cf0 :\cf9 3.0\cf0  \cf8 rotation\cf0 :\cf9 1.5\cf0  \cf8 scaleTo\cf0 :\cf9 0.3\cf0 ];\
+\
+[\cf6 msHelper\cf0  \cf8 scaleImage\cf0 :\cf6 msLogo\cf0  \cf8 duration\cf0 :\cf9 3.0\cf0  \cf8 scaleTo\cf0 :\cf9 1.5\cf0 ];\
+\
+[\cf6 msHelper\cf0  \cf8 scaleImageFrom\cf0 :\cf6 msLogo\cf0  \cf8 duration\cf0 :\cf9 0.6\cf0  \cf8 scaleTo\cf0 :\cf9 0.8\cf0  \cf8 scaleFrom\cf0 :\cf9 1.4\cf0 ];\
+\
+[\cf6 msHelper\cf0  \cf8 moveImage\cf0 :\cf6 msLogo\cf0  \cf8 duration\cf0 :\cf9 1.5\cf0  \cf8 curve\cf0 :\cf7 UIViewAnimationCurveLinear\cf0  \cf8 x\cf0 :+\cf9 50\cf0  \cf8 y\cf0 :\cf9 0\cf0 ];\
+\
+	
+\f0\fs24 \CocoaLigature1 \
+\
+}
